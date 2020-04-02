@@ -1,20 +1,15 @@
-const connection = require('../database/connection');
+const connection = require('../database/connection')
 
 module.exports = {
-    async create(request, response){
-        const { id } = request.body;
-        console.log(request.body);
-        
-        const ong = await connection('ongs')
-            .where('id', '5bc77356')
-            .select('name')
-            .first();
+  async create(request, response) {
+    const { id } = request.body
 
-            if(!ong){
-                return response.status(400).json({ error: 'ID da ONG incorreto' });
-            }
+    const ong = await connection('ongs').where('id', id).select('name').first()
 
-            return response.json(ong);
-    
+    if (!ong) {
+      return response.status(400).json({ error: 'No ONG found with this ID' })
     }
-}   
+
+    return response.json(ong)
+  },
+}
