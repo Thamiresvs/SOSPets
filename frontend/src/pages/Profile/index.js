@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logoImg from '../../assets/logo.svg';
+import logoImg from '../../assets/logo.png';
 import { Link, useHistory } from 'react-router-dom'
 import { FiPower } from 'react-icons/fi';
 import { FiTrash2, FiEdit } from 'react-icons/fi';

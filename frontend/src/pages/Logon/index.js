@@ -8,8 +8,8 @@ import api from '../../services/api';
 import './styles.css';
 import './alertify.min.css';
 
-import logoImg from '../../assets/logo.svg';
-import heroesImg from '../../assets/heroes.png';
+import logoImg from '../../assets/logo.png';
+import sosPetsImg from '../../assets/sospets.png';
 
 export default function Logon(){
     const [id, setId] = useState('');
@@ -32,7 +32,7 @@ export default function Logon(){
     return (
         <div className="logon-container">
             <section className="form">
-                <img src={logoImg} alt = "SOS Pets" />
+                <img src={logoImg} alt = "Be The Hero" />
                 <form onSubmit={handleLogin}>
                     <h1>Faça seu Logon</h1>
                     <input 
@@ -49,7 +49,7 @@ export default function Logon(){
                 </form>
 
             </section>
-            <img src={heroesImg} alt="Heroes"/>
+            <img src={sosPetsImg} alt="Heroes"/>
         </div>
     );
 }
