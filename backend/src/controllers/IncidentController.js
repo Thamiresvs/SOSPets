@@ -69,7 +69,7 @@ module.exports = {
       .first()
 
     if (incident.ong_id !== ong_id) {
-      return response.status(401).json({ error: 'Operation not permitted.' })
+      return response.status(401).json({ error: 'Operação não permitida!' })
     }
    
     const new_incident = await connection('incidents')
